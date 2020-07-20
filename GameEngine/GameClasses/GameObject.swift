@@ -16,10 +16,8 @@ class GameObject: Node {
     init(meshType: MeshTypes) {
         mesh = MeshLibrary.mesh(.Quad_Custom)
     }
-    var time: Float = 0
-    func update(delteTime: Float) {
-        time += delteTime
-        self.scale = float3(cos(time))
+    
+    override func update(deltaTime: Float) {
         updateModelConstants()
     }
     
