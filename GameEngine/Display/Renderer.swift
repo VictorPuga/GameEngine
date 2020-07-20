@@ -17,14 +17,15 @@ extension Renderer: MTKViewDelegate {
         
     }
     func draw(in view: MTKView) {
-        guard let drawable = view.currentDrawable, let renderPassDescriptor = view.currentRenderPassDescriptor else {return}
-          let commandBuffer = Engine.CommandQueue.makeCommandBuffer()
-          let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
-          
-          player.render(renderCommandEncoder: renderCommandEncoder!)
-          
-          renderCommandEncoder?.endEncoding()
-          commandBuffer?.present(drawable)
-          commandBuffer?.commit()
+        guard let drawable = view.currentDrawable, let renderPassDescriptor = view.currentRenderPassDescriptor else { return }
+        let commandBuffer = Engine.CommandQueue.makeCommandBuffer()
+        let renderCommandEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderPassDescriptor)
+        
+        player.update(delteTime: 1 / Float(view.preferredFramesPerSecond))
+        player.render(renderCommandEncoder: renderCommandEncoder!)
+
+        renderCommandEncoder?.endEncoding()
+        commandBuffer?.present(drawable)
+        commandBuffer?.commit()
     }
 }

@@ -31,3 +31,9 @@ struct Vertex: sizeable {
 }
 
 extension float3: sizeable { }
+
+extension Float: sizeable { }
+
+struct ModelConstants: sizeable {
+    var modelMatrix = matrix_identity_float4x4
+}

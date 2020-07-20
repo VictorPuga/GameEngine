@@ -28,6 +28,7 @@
 		28DC841B24BF91BF0062533B /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC841A24BF91BF0062533B /* Engine.swift */; };
 		28DC841D24BF936C0062533B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC841C24BF936C0062533B /* Preferences.swift */; };
 		28DC841F24BF95A80062533B /* ShaderLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC841E24BF95A80062533B /* ShaderLibrary.swift */; };
+		28F0348A24C4F92B0058EE67 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0348924C4F92B0058EE67 /* Math.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		28DC841A24BF91BF0062533B /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		28DC841C24BF936C0062533B /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		28DC841E24BF95A80062533B /* ShaderLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderLibrary.swift; sourceTree = "<group>"; };
+		28F0348924C4F92B0058EE67 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		2887F73324B960F00040AC88 /* GameEngine */ = {
 			isa = PBXGroup;
 			children = (
+				28F0348824C4F8FE0058EE67 /* Maths */,
 				28DC841624BF90610062533B /* Core */,
 				28DC841724BF90730062533B /* Libraries */,
 				28DC841824BF908E0062533B /* Shaders */,
@@ -223,6 +226,14 @@
 				2887F73D24B960F20040AC88 /* Main.storyboard */,
 			);
 			path = Display;
+			sourceTree = "<group>";
+		};
+		28F0348824C4F8FE0058EE67 /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				28F0348924C4F92B0058EE67 /* Math.swift */,
+			);
+			path = Maths;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +377,7 @@
 				28DC841B24BF91BF0062533B /* Engine.swift in Sources */,
 				2887F73A24B960F00040AC88 /* GameEngine.xcdatamodeld in Sources */,
 				283C633A24BDFB3800B85F30 /* GameView.swift in Sources */,
+				28F0348A24C4F92B0058EE67 /* Math.swift in Sources */,
 				281FDC5424C0CD1900BEBFE9 /* GameObject.swift in Sources */,
 				2841073A24C36D02009EB0A8 /* Node.swift in Sources */,
 				28DC841524BF8DCA0062533B /* Types.swift in Sources */,
