@@ -9,7 +9,7 @@
 import MetalKit
 
 class Renderer: NSObject {
-    public static var screenSize: float2 = float2(0,0)
+    public static var screenSize: SIMD2<Float> = SIMD2<Float>(0,0)
     
     init(_ mtkView: MTKView) {
         super.init()
@@ -20,7 +20,7 @@ class Renderer: NSObject {
 extension Renderer: MTKViewDelegate {
     
     public func updateScreenSize(view: MTKView) {
-        Renderer.screenSize = float2(Float(view.bounds.width),
+        Renderer.screenSize = SIMD2<Float>(Float(view.bounds.width),
                                      Float(view.bounds.height))
     }
     

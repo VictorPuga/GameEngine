@@ -17,8 +17,8 @@ class Mouse {
     private static var MOUSE_BUTTON_COUNT = 12
     private static var mouseButtonList = [Bool].init(repeating: false, count: MOUSE_BUTTON_COUNT)
     
-    private static var overallMousePosition = float2(0,0)
-    private static var mousePositionDelta = float2(0,0)
+    private static var overallMousePosition = SIMD2<Float>(0,0)
+    private static var mousePositionDelta = SIMD2<Float>(0,0)
     
     private static var scrollWheelPosition: Float = 0
     private static var lastWheelPosition: Float = 0.0
@@ -32,12 +32,12 @@ class Mouse {
         return mouseButtonList[Int(button.rawValue)] == true
     }
     
-    public static func setOverallMousePosition(position: float2) {
+    public static func setOverallMousePosition(position: SIMD2<Float>) {
         self.overallMousePosition = position
     }
     
     ///Sets the delta distance the mouse had moved
-    public static func setMousePositionChange(overallPosition: float2, deltaPosition: float2) {
+    public static func setMousePositionChange(overallPosition: SIMD2<Float>, deltaPosition: SIMD2<Float>) {
         self.overallMousePosition = overallPosition
         self.mousePositionDelta += deltaPosition
     }
@@ -48,7 +48,7 @@ class Mouse {
     }
     
     //Returns the overall position of the mouse on the current window
-    public static func getMouseWindowPosition() -> float2 {
+    public static func getMouseWindowPosition() -> SIMD2<Float> {
         return overallMousePosition
     }
     
@@ -74,9 +74,9 @@ class Mouse {
     }
     
     //Returns the mouse position in screen-view coordinates [-1, 1]
-    public static func getMouseViewportPosition()->float2{
+    public static func getMouseViewportPosition()->SIMD2<Float>{
         let x = (overallMousePosition.x - Renderer.screenSize.x * 0.5) / (Renderer.screenSize.x * 0.5)
         let y = (overallMousePosition.y - Renderer.screenSize.y * 0.5) / (Renderer.screenSize.y * 0.5)
-        return float2(x, y)
+        return SIMD2<Float>(x, y)
     }
 }

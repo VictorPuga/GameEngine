@@ -14,7 +14,7 @@ enum CameraTypes {
 
 protocol Camera {
     var cameraType: CameraTypes { get }
-    var position: float3 { get set }
+    var position: SIMD3<Float> { get set }
     func update(deltaTime: Float)
 }
 

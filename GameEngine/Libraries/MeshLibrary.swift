@@ -60,9 +60,9 @@ class CustomMesh: Mesh {
 class Triangle_CustomMesh: CustomMesh {
     override func createVertices() {
         vertices =  [
-            Vertex(position: float3( 0,  1, 0), color: float4(1,0,0,1)),
-            Vertex(position: float3(-1, -1, 0), color: float4(0,1,0,1)),
-            Vertex(position: float3( 1, -1, 0), color: float4(0,0,1,1))
+            Vertex(position: SIMD3<Float>( 0,  1, 0), color: SIMD4<Float>(1,0,0,1)),
+            Vertex(position: SIMD3<Float>(-1, -1, 0), color: SIMD4<Float>(0,1,0,1)),
+            Vertex(position: SIMD3<Float>( 1, -1, 0), color: SIMD4<Float>(0,0,1,1))
         ]
     }
 }
@@ -70,13 +70,13 @@ class Triangle_CustomMesh: CustomMesh {
 class Quad_CustomMesh: CustomMesh {
     override func createVertices() {
         vertices =  [
-            Vertex(position: float3( 1,  1, 0), color: float4(1,0,0,1)),
-            Vertex(position: float3(-1,  1, 0), color: float4(0,1,0,1)),
-            Vertex(position: float3(-1, -1, 0), color: float4(0,0,1,1)),
+            Vertex(position: SIMD3<Float>( 1,  1, 0), color: SIMD4<Float>(1,0,0,1)),
+            Vertex(position: SIMD3<Float>(-1,  1, 0), color: SIMD4<Float>(0,1,0,1)),
+            Vertex(position: SIMD3<Float>(-1, -1, 0), color: SIMD4<Float>(0,0,1,1)),
             
-            Vertex(position: float3( 1,  1, 0), color: float4(1,0,0,1)),
-            Vertex(position: float3(-1, -1, 0), color: float4(0,0,1,1)),
-            Vertex(position: float3( 1, -1, 0), color: float4(1,0,1,1))
+            Vertex(position: SIMD3<Float>( 1,  1, 0), color: SIMD4<Float>(1,0,0,1)),
+            Vertex(position: SIMD3<Float>(-1, -1, 0), color: SIMD4<Float>(0,0,1,1)),
+            Vertex(position: SIMD3<Float>( 1, -1, 0), color: SIMD4<Float>(1,0,1,1))
         ]
     }
 }

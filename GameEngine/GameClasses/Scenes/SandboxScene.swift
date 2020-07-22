@@ -12,13 +12,13 @@ class SandboxScene: Scene {
     var debugCamera = DebugCamera()
     override func buildScene() {
         addCamera(debugCamera)
-        let count = 20
+        let count = 5
         for y in -count..<count {
             for x in -count..<count {
                 let pointer = Pointer(camera: debugCamera)
                 pointer.position.y = Float(Float(y) + 0.5) / Float(count)
                 pointer.position.x = Float(Float(x) + 0.5) / Float(count)
-                pointer.scale = float3(0.1)
+                pointer.scale = SIMD3<Float>(repeating: 0.1)
                 addChild(pointer)
             }
         }

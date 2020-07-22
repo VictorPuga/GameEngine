@@ -26,11 +26,11 @@ extension sizeable {
 }
 
 struct Vertex: sizeable {
-    var position: float3
-    var color: float4
+    var position: SIMD3<Float>
+    var color: SIMD4<Float>
 }
 
-extension float3: sizeable { }
+extension SIMD3: sizeable { }
 
 extension Float: sizeable { }
 

@@ -10,9 +10,9 @@ import MetalKit
 
 class Node {
     
-    var position: float3 = float3(0)
-    var scale: float3 = float3(1)
-    var rotation: float3 = float3(0)
+    var position: SIMD3<Float> = SIMD3<Float>(0, 0, 0)
+    var scale: SIMD3<Float> = SIMD3<Float>(1, 1, 1)
+    var rotation: SIMD3<Float> = SIMD3<Float>(0, 0, 0)
     
     var modelMatrix: matrix_float4x4 {
         var modelMatrix = matrix_identity_float4x4

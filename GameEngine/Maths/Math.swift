@@ -8,44 +8,44 @@
 
 import MetalKit
 
-public let X_AXIS = float3(1,0,0)
-public let Y_AXIS = float3(0,1,0)
-public let Z_AXIS = float3(0,0,1)
+public let X_AXIS = SIMD3<Float>(1,0,0)
+public let Y_AXIS = SIMD3<Float>(0,1,0)
+public let Z_AXIS = SIMD3<Float>(0,0,1)
 
 extension matrix_float4x4 {
-    mutating func translate(direction: float3) {
+    mutating func translate(direction: SIMD3<Float>) {
         var result = matrix_identity_float4x4
         let x = direction.x
         let y = direction.y
         let z = direction.z
         
         result.columns = (
-            float4(1,0,0,0),
-            float4(0,1,0,0),
-            float4(0,0,1,0),
-            float4(x,y,z,1)
+            SIMD4<Float>(1,0,0,0),
+            SIMD4<Float>(0,1,0,0),
+            SIMD4<Float>(0,0,1,0),
+            SIMD4<Float>(x,y,z,1)
         )
         
         self = matrix_multiply(self, result)
     }
     
-    mutating func scale(axis: float3) {
+    mutating func scale(axis: SIMD3<Float>) {
         var result = matrix_identity_float4x4
         let x = axis.x
         let y = axis.y
         let z = axis.z
         
         result.columns = (
-            float4(x,0,0,0),
-            float4(0,y,0,0),
-            float4(0,0,z,0),
-            float4(0,0,0,1)
+            SIMD4<Float>(x,0,0,0),
+            SIMD4<Float>(0,y,0,0),
+            SIMD4<Float>(0,0,z,0),
+            SIMD4<Float>(0,0,0,1)
         )
         
         self = matrix_multiply(self, result)
     }
     
-    mutating func rotate(angle: Float, axis: float3) {
+    mutating func rotate(angle: Float, axis: SIMD3<Float>) {
         var result = matrix_identity_float4x4
         let x = axis.x
         let y = axis.y
@@ -77,10 +77,10 @@ extension matrix_float4x4 {
         let r4c4: Float = 1.0
         
         result.columns = (
-            float4(r1c1, r2c1, r3c1, r4c1),
-            float4(r1c2, r2c2, r3c2, r4c2),
-            float4(r1c3, r2c3, r3c3, r4c3),
-            float4(r1c4, r2c4, r3c4, r4c4)
+            SIMD4<Float>(r1c1, r2c1, r3c1, r4c1),
+            SIMD4<Float>(r1c2, r2c2, r3c2, r4c2),
+            SIMD4<Float>(r1c3, r2c3, r3c3, r4c3),
+            SIMD4<Float>(r1c4, r2c4, r3c4, r4c4)
         )
         
         self = matrix_multiply(self, result)
