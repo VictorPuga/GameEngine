@@ -9,13 +9,25 @@
 import MetalKit
 
 class Renderer: NSObject {
-    var scene = SandboxScene()
+    public static var screenSize: float2 = float2(0,0)
+    
+    init(_ mtkView: MTKView) {
+        super.init()
+        updateScreenSize(view: mtkView)
+    }
 }
 
 extension Renderer: MTKViewDelegate {
-    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        
+    
+    public func updateScreenSize(view: MTKView) {
+        Renderer.screenSize = float2(Float(view.bounds.width),
+                                     Float(view.bounds.height))
     }
+    
+    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
+        updateScreenSize(view: view)
+    }
+    
     func draw(in view: MTKView) {
         guard let drawable = view.currentDrawable, let renderPassDescriptor = view.currentRenderPassDescriptor else { return }
         let commandBuffer = Engine.CommandQueue.makeCommandBuffer()

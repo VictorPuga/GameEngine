@@ -82,5 +82,7 @@ extension matrix_float4x4 {
             float4(r1c3, r2c3, r3c3, r4c3),
             float4(r1c4, r2c4, r3c4, r4c4)
         )
+        
+        self = matrix_multiply(self, result)
     }
 }

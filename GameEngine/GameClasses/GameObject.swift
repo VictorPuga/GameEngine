@@ -14,7 +14,7 @@ class GameObject: Node {
     
 
     init(meshType: MeshTypes) {
-        mesh = MeshLibrary.mesh(.Quad_Custom)
+        mesh = MeshLibrary.mesh(meshType)
     }
     
     override func update(deltaTime: Float) {
