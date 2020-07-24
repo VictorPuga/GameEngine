@@ -12,6 +12,15 @@ public let X_AXIS = SIMD3<Float>(1,0,0)
 public let Y_AXIS = SIMD3<Float>(0,1,0)
 public let Z_AXIS = SIMD3<Float>(0,0,1)
 
+extension Float {
+    var toRadians: Float {
+        return (self / 180.0) * Float.pi
+    }
+    var toDegrees: Float {
+        return self * (180.0 / Float.pi)
+    }
+}
+
 extension matrix_float4x4 {
     mutating func translate(direction: SIMD3<Float>) {
         var result = matrix_identity_float4x4
@@ -44,17 +53,17 @@ extension matrix_float4x4 {
         
         self = matrix_multiply(self, result)
     }
-    
-    mutating func rotate(angle: Float, axis: SIMD3<Float>) {
+        mutating func rotate(angle: Float, axis: SIMD3<Float>){
         var result = matrix_identity_float4x4
-        let x = axis.x
-        let y = axis.y
-        let z = axis.z
         
-        let c = cos(angle)
-        let s = sin(angle)
+        let x: Float = axis.x
+        let y: Float = axis.y
+        let z: Float = axis.z
         
-        let mc = (1 - c)
+        let c: Float = cos(angle)
+        let s: Float = sin(angle)
+        
+        let mc: Float = (1 - c)
         
         let r1c1: Float = x * x * mc + c
         let r2c1: Float = x * y * mc + z * s
@@ -66,7 +75,7 @@ extension matrix_float4x4 {
         let r3c2: Float = y * z * mc + x * s
         let r4c2: Float = 0.0
         
-        let r1c3: Float = z * x * mc - y * s
+        let r1c3: Float = z * x * mc + y * s
         let r2c3: Float = z * y * mc - x * s
         let r3c3: Float = z * z * mc + c
         let r4c3: Float = 0.0
@@ -84,5 +93,26 @@ extension matrix_float4x4 {
         )
         
         self = matrix_multiply(self, result)
+    }
+    
+    // https://gamedev.stackexchange.com/questions/120338/what-does-a-perspective-projection-matrix-look-like-in-opengl
+    static func perspective(degreesFov: Float, aspectRatio: Float, near: Float, far: Float)->matrix_float4x4{
+        let fov = degreesFov.toRadians
+        
+        let t: Float = tan(fov / 2)
+        
+        let x: Float = 1 / (aspectRatio * t)
+        let y: Float = 1 / t
+        let z: Float = -((far + near) / (far - near))
+        let w: Float = -((2 * far * near) / (far - near))
+        
+        var result = matrix_identity_float4x4
+        result.columns = (
+            SIMD4<Float>(x,  0,  0,   0),
+            SIMD4<Float>(0,  y,  0,   0),
+            SIMD4<Float>(0,  0,  z,  -1),
+            SIMD4<Float>(0,  0,  w,   0)
+        )
+        return result
     }
 }

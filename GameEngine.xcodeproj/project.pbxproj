@@ -30,6 +30,8 @@
 		28A7C93724C8B488004F4AF0 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A7C93624C8B488004F4AF0 /* Camera.swift */; };
 		28A7C93924C8B5EA004F4AF0 /* DebugCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A7C93824C8B5EA004F4AF0 /* DebugCamera.swift */; };
 		28A7C93B24C8BA42004F4AF0 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A7C93A24C8BA42004F4AF0 /* CameraManager.swift */; };
+		28C2590024CA5BC300819A5D /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C258FF24CA5BC300819A5D /* Cube.swift */; };
+		28C2590224CA5EDE00819A5D /* DepthStencilStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C2590124CA5EDE00819A5D /* DepthStencilStateLibrary.swift */; };
 		28DC841524BF8DCA0062533B /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC841424BF8DCA0062533B /* Types.swift */; };
 		28DC841B24BF91BF0062533B /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC841A24BF91BF0062533B /* Engine.swift */; };
 		28DC841D24BF936C0062533B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC841C24BF936C0062533B /* Preferences.swift */; };
@@ -88,6 +90,8 @@
 		28A7C93624C8B488004F4AF0 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		28A7C93824C8B5EA004F4AF0 /* DebugCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugCamera.swift; sourceTree = "<group>"; };
 		28A7C93A24C8BA42004F4AF0 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		28C258FF24CA5BC300819A5D /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
+		28C2590124CA5EDE00819A5D /* DepthStencilStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthStencilStateLibrary.swift; sourceTree = "<group>"; };
 		28DC841424BF8DCA0062533B /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		28DC841A24BF91BF0062533B /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		28DC841C24BF936C0062533B /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 			children = (
 				281FDC5324C0CD1900BEBFE9 /* GameObject.swift */,
 				2841073724C36C1E009EB0A8 /* Pointer.swift */,
+				28C258FF24CA5BC300819A5D /* Cube.swift */,
 			);
 			path = "Game Objects";
 			sourceTree = "<group>";
@@ -239,8 +244,8 @@
 		28DC841624BF90610062533B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				28DC841424BF8DCA0062533B /* Types.swift */,
 				28DC841A24BF91BF0062533B /* Engine.swift */,
+				28DC841424BF8DCA0062533B /* Types.swift */,
 				28DC841C24BF936C0062533B /* Preferences.swift */,
 				283F868524C7E2D30063341A /* Input */,
 			);
@@ -255,6 +260,7 @@
 				281FDC4E24C0C5B800BEBFE9 /* RenderPipelineDescriptorLibrary.swift */,
 				281FDC5024C0C82000BEBFE9 /* RenderPipelineStateLibrary.swift */,
 				2841073524C3668C009EB0A8 /* MeshLibrary.swift */,
+				28C2590124CA5EDE00819A5D /* DepthStencilStateLibrary.swift */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -445,7 +451,9 @@
 				28A7C93924C8B5EA004F4AF0 /* DebugCamera.swift in Sources */,
 				28DC841F24BF95A80062533B /* ShaderLibrary.swift in Sources */,
 				281FDC5624C0CFB200BEBFE9 /* Renderer.swift in Sources */,
+				28C2590024CA5BC300819A5D /* Cube.swift in Sources */,
 				28DC841B24BF91BF0062533B /* Engine.swift in Sources */,
+				28C2590224CA5EDE00819A5D /* DepthStencilStateLibrary.swift in Sources */,
 				28F0349224C51ED70058EE67 /* SceneManager.swift in Sources */,
 				2887F73A24B960F00040AC88 /* GameEngine.xcdatamodeld in Sources */,
 				283C633A24BDFB3800B85F30 /* GameView.swift in Sources */,
