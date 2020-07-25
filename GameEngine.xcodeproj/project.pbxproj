@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2816B48C24CC83AF000E40B5 /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2816B48B24CC83AF000E40B5 /* ColorUtil.swift */; };
 		281FDC4D24C0C30200BEBFE9 /* VertexDescriptorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281FDC4C24C0C30200BEBFE9 /* VertexDescriptorLibrary.swift */; };
 		281FDC4F24C0C5B800BEBFE9 /* RenderPipelineDescriptorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281FDC4E24C0C5B800BEBFE9 /* RenderPipelineDescriptorLibrary.swift */; };
 		281FDC5124C0C82000BEBFE9 /* RenderPipelineStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281FDC5024C0C82000BEBFE9 /* RenderPipelineStateLibrary.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2816B48B24CC83AF000E40B5 /* ColorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		281FDC4C24C0C30200BEBFE9 /* VertexDescriptorLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptorLibrary.swift; sourceTree = "<group>"; };
 		281FDC4E24C0C5B800BEBFE9 /* RenderPipelineDescriptorLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineDescriptorLibrary.swift; sourceTree = "<group>"; };
 		281FDC5024C0C82000BEBFE9 /* RenderPipelineStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineStateLibrary.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2816B48A24CC8398000E40B5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2816B48B24CC83AF000E40B5 /* ColorUtil.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		281FDC5224C0CCD300BEBFE9 /* GameClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +190,7 @@
 		2887F73324B960F00040AC88 /* GameEngine */ = {
 			isa = PBXGroup;
 			children = (
+				2816B48A24CC8398000E40B5 /* Utils */,
 				28F0348824C4F8FE0058EE67 /* Maths */,
 				28DC841624BF90610062533B /* Core */,
 				28DC841724BF90730062533B /* Libraries */,
@@ -442,6 +453,7 @@
 				2841073F24C36FA9009EB0A8 /* Renderable.swift in Sources */,
 				281FDC4F24C0C5B800BEBFE9 /* RenderPipelineDescriptorLibrary.swift in Sources */,
 				281FDC4D24C0C30200BEBFE9 /* VertexDescriptorLibrary.swift in Sources */,
+				2816B48C24CC83AF000E40B5 /* ColorUtil.swift in Sources */,
 				28F0348D24C51B8F0058EE67 /* Scene.swift in Sources */,
 				283C633C24BE026B00B85F30 /* MyShaders.metal in Sources */,
 				28DC841D24BF936C0062533B /* Preferences.swift in Sources */,
