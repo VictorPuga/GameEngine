@@ -31,12 +31,11 @@ extension GameObject: Renderable {
         renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.pipelineState(.Basic))
         renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.depthStencilState(.Less))
         // Vertex shader
-        renderCommandEncoder.setVertexBuffer(mesh.vertexBuffer, offset: 0, index: 0)
         renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
         // Fragment shader
         renderCommandEncoder.setFragmentBytes(&material, length: Material.stride, index: 1)
         
-        renderCommandEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: mesh.vertexCount)
+        mesh.drawPrimitives(renderCommandEncoder)
     }
 }
 
