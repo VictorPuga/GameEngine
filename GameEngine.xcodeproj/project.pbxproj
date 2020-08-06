@@ -164,7 +164,7 @@
 			children = (
 				2841073924C36D02009EB0A8 /* Node.swift */,
 				28A7C93524C8B449004F4AF0 /* cameras */,
-				28F0348B24C51B7F0058EE67 /* scenes */,
+				28F0348B24C51B7F0058EE67 /* scenes 2 */,
 				28A7C93424C8B407004F4AF0 /* game objects */,
 				2841073B24C36D5B009EB0A8 /* protocols */,
 			);
@@ -367,13 +367,13 @@
 			path = maths;
 			sourceTree = "<group>";
 		};
-		28F0348B24C51B7F0058EE67 /* scenes */ = {
+		28F0348B24C51B7F0058EE67 /* scenes 2 */ = {
 			isa = PBXGroup;
 			children = (
 				28F0348C24C51B8F0058EE67 /* Scene.swift */,
 				28F0348E24C51D300058EE67 /* SandboxScene.swift */,
 			);
-			path = scenes;
+			path = "scenes 2";
 			sourceTree = "<group>";
 		};
 		28F0349024C51EAE0058EE67 /* Managers */ = {
