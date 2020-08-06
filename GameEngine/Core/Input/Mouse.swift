@@ -4,7 +4,7 @@
 //
 //  Created by Victor Manuel Puga Ruiz on 21/07/20.
 //  Copyright © 2020 Ampersand Labs. All rights reserved.
-//
+
 import MetalKit
 
 enum MouseCodes: Int {
@@ -24,36 +24,36 @@ class Mouse {
     private static var lastWheelPosition: Float = 0.0
     private static var scrollWheelChange: Float = 0.0
     
-    public static func setMouseButtonPressed(button: Int, isOn: Bool) {
+    public static func setMouseButtonPressed(button: Int, isOn: Bool){
         mouseButtonList[button] = isOn
     }
     
-    public static func isMouseButtonPressed(button: MouseCodes) -> Bool {
+    public static func isMouseButtonPressed(button: MouseCodes)->Bool{
         return mouseButtonList[Int(button.rawValue)] == true
     }
     
-    public static func setOverallMousePosition(position: SIMD2<Float>) {
+    public static func setOverallMousePosition(position: SIMD2<Float>){
         self.overallMousePosition = position
     }
     
     ///Sets the delta distance the mouse had moved
-    public static func setMousePositionChange(overallPosition: SIMD2<Float>, deltaPosition: SIMD2<Float>) {
+    public static func setMousePositionChange(overallPosition: SIMD2<Float>, deltaPosition: SIMD2<Float>){
         self.overallMousePosition = overallPosition
         self.mousePositionDelta += deltaPosition
     }
     
-    public static func scrollMouse(deltaY: Float) {
+    public static func scrollMouse(deltaY: Float){
         scrollWheelPosition += deltaY
         scrollWheelChange += deltaY
     }
     
     //Returns the overall position of the mouse on the current window
-    public static func getMouseWindowPosition() -> SIMD2<Float> {
+    public static func getMouseWindowPosition()->SIMD2<Float>{
         return overallMousePosition
     }
     
     ///Returns the movement of the wheel since last time getDWheel() was called
-    public static func GetDWheel()->Float{
+    public static func getDWheel()->Float{
         let position = scrollWheelChange
         scrollWheelChange = 0
         return position
@@ -75,8 +75,8 @@ class Mouse {
     
     //Returns the mouse position in screen-view coordinates [-1, 1]
     public static func getMouseViewportPosition()->SIMD2<Float>{
-        let x = (overallMousePosition.x - Renderer.screenSize.x * 0.5) / (Renderer.screenSize.x * 0.5)
-        let y = (overallMousePosition.y - Renderer.screenSize.y * 0.5) / (Renderer.screenSize.y * 0.5)
+        let x = (overallMousePosition.x - Renderer.ScreenSize.x * 0.5) / (Renderer.ScreenSize.x * 0.5)
+        let y = (overallMousePosition.y - Renderer.ScreenSize.y * 0.5) / (Renderer.ScreenSize.y * 0.5)
         return SIMD2<Float>(x, y)
     }
 }
