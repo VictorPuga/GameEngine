@@ -8,28 +8,40 @@
 
 import MetalKit
 
-public let X_AXIS = SIMD3<Float>(1,0,0)
-public let Y_AXIS = SIMD3<Float>(0,1,0)
-public let Z_AXIS = SIMD3<Float>(0,0,1)
+public var X_AXIS: SIMD3<Float>{
+    return SIMD3<Float>(1,0,0)
+}
+
+public var Y_AXIS: SIMD3<Float>{
+    return SIMD3<Float>(0,1,0)
+}
+
+public var Z_AXIS: SIMD3<Float>{
+    return SIMD3<Float>(0,0,1)
+}
 
 extension Float {
-    var toRadians: Float {
+    var toRadians: Float{
         return (self / 180.0) * Float.pi
     }
-    var toDegrees: Float {
+    
+    var toDegrees: Float{
         return self * (180.0 / Float.pi)
     }
-    static var randomZeroToOne: Float {
+    
+    static var randomZeroToOne: Float{
         return Float(arc4random()) / Float(UINT32_MAX)
     }
 }
 
 extension matrix_float4x4 {
-    mutating func translate(direction: SIMD3<Float>) {
+    
+    mutating func translate(direction: SIMD3<Float>){
         var result = matrix_identity_float4x4
-        let x = direction.x
-        let y = direction.y
-        let z = direction.z
+        
+        let x: Float = direction.x
+        let y: Float = direction.y
+        let z: Float = direction.z
         
         result.columns = (
             SIMD4<Float>(1,0,0,0),
@@ -41,11 +53,12 @@ extension matrix_float4x4 {
         self = matrix_multiply(self, result)
     }
     
-    mutating func scale(axis: SIMD3<Float>) {
+    mutating func scale(axis: SIMD3<Float>){
         var result = matrix_identity_float4x4
-        let x = axis.x
-        let y = axis.y
-        let z = axis.z
+        
+        let x: Float = axis.x
+        let y: Float = axis.y
+        let z: Float = axis.z
         
         result.columns = (
             SIMD4<Float>(x,0,0,0),
@@ -56,7 +69,9 @@ extension matrix_float4x4 {
         
         self = matrix_multiply(self, result)
     }
-        mutating func rotate(angle: Float, axis: SIMD3<Float>){
+    
+    
+    mutating func rotate(angle: Float, axis: SIMD3<Float>){
         var result = matrix_identity_float4x4
         
         let x: Float = axis.x
@@ -98,7 +113,7 @@ extension matrix_float4x4 {
         self = matrix_multiply(self, result)
     }
     
-    // https://gamedev.stackexchange.com/questions/120338/what-does-a-perspective-projection-matrix-look-like-in-opengl
+    //https://gamedev.stackexchange.com/questions/120338/what-does-a-perspective-projection-matrix-look-like-in-opengl
     static func perspective(degreesFov: Float, aspectRatio: Float, near: Float, far: Float)->matrix_float4x4{
         let fov = degreesFov.toRadians
         
