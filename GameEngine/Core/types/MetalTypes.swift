@@ -51,5 +51,6 @@ struct SceneConstants: sizeable {
 struct Material: sizeable {
     var color = SIMD4<Float>(0.8, 0.8, 0.8, 1.0)
     var useMaterialColor: Bool = false
+    var useTexture: Bool = false
 }
 
