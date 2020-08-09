@@ -50,6 +50,14 @@
 		28DC841524BF8DCA0062533B /* MetalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC841424BF8DCA0062533B /* MetalTypes.swift */; };
 		28DC841B24BF91BF0062533B /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC841A24BF91BF0062533B /* Engine.swift */; };
 		28DC841D24BF936C0062533B /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DC841C24BF936C0062533B /* Preferences.swift */; };
+		28DED4BC24E0793E0077D65C /* cruiser.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 28DED4B924E0793D0077D65C /* cruiser.bmp */; };
+		28DED4BD24E0793E0077D65C /* cruiser.obj in Resources */ = {isa = PBXBuildFile; fileRef = 28DED4BA24E0793D0077D65C /* cruiser.obj */; };
+		28DED4BE24E0793E0077D65C /* cruiser.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 28DED4BB24E0793D0077D65C /* cruiser.mtl */; };
+		28DED4C024E084550077D65C /* Cruiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DED4BF24E084550077D65C /* Cruiser.swift */; };
+		28DED4C224E08CF00077D65C /* LightObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DED4C124E08CF00077D65C /* LightObject.swift */; };
+		28DED4C624E08EB20077D65C /* LightManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DED4C524E08EB20077D65C /* LightManager.swift */; };
+		28DED4C824E091230077D65C /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DED4C724E091230077D65C /* Sun.swift */; };
+		28DED4CA24E0922C0077D65C /* sphere.obj in Resources */ = {isa = PBXBuildFile; fileRef = 28DED4C924E0922C0077D65C /* sphere.obj */; };
 		28E0F4C724DDEFC70032C34A /* SamplerStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E0F4C624DDEFC70032C34A /* SamplerStateLibrary.swift */; };
 		28F0348A24C4F92B0058EE67 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0348924C4F92B0058EE67 /* Math.swift */; };
 		28F0348D24C51B8F0058EE67 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0348C24C51B8F0058EE67 /* Scene.swift */; };
@@ -125,6 +133,14 @@
 		28DC841424BF8DCA0062533B /* MetalTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalTypes.swift; sourceTree = "<group>"; };
 		28DC841A24BF91BF0062533B /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		28DC841C24BF936C0062533B /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		28DED4B924E0793D0077D65C /* cruiser.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = cruiser.bmp; sourceTree = "<group>"; };
+		28DED4BA24E0793D0077D65C /* cruiser.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.obj; sourceTree = "<group>"; };
+		28DED4BB24E0793D0077D65C /* cruiser.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.mtl; sourceTree = "<group>"; };
+		28DED4BF24E084550077D65C /* Cruiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cruiser.swift; sourceTree = "<group>"; };
+		28DED4C124E08CF00077D65C /* LightObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightObject.swift; sourceTree = "<group>"; };
+		28DED4C524E08EB20077D65C /* LightManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightManager.swift; sourceTree = "<group>"; };
+		28DED4C724E091230077D65C /* Sun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
+		28DED4C924E0922C0077D65C /* sphere.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sphere.obj; sourceTree = "<group>"; };
 		28E0F4C624DDEFC70032C34A /* SamplerStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerStateLibrary.swift; sourceTree = "<group>"; };
 		28F0348924C4F92B0058EE67 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		28F0348C24C51B8F0058EE67 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
@@ -250,6 +266,8 @@
 		28638BE624DDA6CF00F17D2C /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				28DED4C924E0922C0077D65C /* sphere.obj */,
+				28DED4B824E078FD0077D65C /* cruiser */,
 				28638BE724DDA77B00F17D2C /* PartyPirateParot.png */,
 			);
 			path = resources;
@@ -323,7 +341,10 @@
 			isa = PBXGroup;
 			children = (
 				281FDC5324C0CD1900BEBFE9 /* GameObject.swift */,
+				28DED4C124E08CF00077D65C /* LightObject.swift */,
 				2852675324CCE96200A316A0 /* InstancedGameObject.swift */,
+				28DED4C724E091230077D65C /* Sun.swift */,
+				28DED4BF24E084550077D65C /* Cruiser.swift */,
 				2852675524CCF8C400A316A0 /* CubeCollection.swift */,
 				2841073724C36C1E009EB0A8 /* Pointer.swift */,
 				28C258FF24CA5BC300819A5D /* Cube.swift */,
@@ -376,6 +397,16 @@
 			path = Display;
 			sourceTree = "<group>";
 		};
+		28DED4B824E078FD0077D65C /* cruiser */ = {
+			isa = PBXGroup;
+			children = (
+				28DED4B924E0793D0077D65C /* cruiser.bmp */,
+				28DED4BB24E0793D0077D65C /* cruiser.mtl */,
+				28DED4BA24E0793D0077D65C /* cruiser.obj */,
+			);
+			path = cruiser;
+			sourceTree = "<group>";
+		};
 		28F0348824C4F8FE0058EE67 /* maths */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +429,7 @@
 			children = (
 				28F0349124C51ED70058EE67 /* SceneManager.swift */,
 				28A7C93A24C8BA42004F4AF0 /* CameraManager.swift */,
+				28DED4C524E08EB20077D65C /* LightManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -506,9 +538,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28DED4CA24E0922C0077D65C /* sphere.obj in Resources */,
+				28DED4BD24E0793E0077D65C /* cruiser.obj in Resources */,
 				2887F73C24B960F20040AC88 /* Assets.xcassets in Resources */,
+				28DED4BC24E0793E0077D65C /* cruiser.bmp in Resources */,
 				2887F73F24B960F20040AC88 /* Main.storyboard in Resources */,
 				28638BE824DDA77B00F17D2C /* PartyPirateParot.png in Resources */,
+				28DED4BE24E0793E0077D65C /* cruiser.mtl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +578,7 @@
 				2856515624DB862100689C05 /* Entities.swift in Sources */,
 				2856516524DB869E00689C05 /* DepthStencilStateLibrary.swift in Sources */,
 				2856514E24DB847C00689C05 /* GameTime.swift in Sources */,
+				28DED4C024E084550077D65C /* Cruiser.swift in Sources */,
 				28DC841D24BF936C0062533B /* Preferences.swift in Sources */,
 				2856515C24DB867000689C05 /* Graphics.swift in Sources */,
 				2852675424CCE96200A316A0 /* InstancedGameObject.swift in Sources */,
@@ -561,9 +598,11 @@
 				283C633A24BDFB3800B85F30 /* GameView.swift in Sources */,
 				2856516F24DB876C00689C05 /* InstancedShaders.metal in Sources */,
 				28E0F4C724DDEFC70032C34A /* SamplerStateLibrary.swift in Sources */,
+				28DED4C224E08CF00077D65C /* LightObject.swift in Sources */,
 				28F0348A24C4F92B0058EE67 /* Math.swift in Sources */,
 				283F868724C7E3070063341A /* Keyboard.swift in Sources */,
 				281FDC5424C0CD1900BEBFE9 /* GameObject.swift in Sources */,
+				28DED4C824E091230077D65C /* Sun.swift in Sources */,
 				2841073A24C36D02009EB0A8 /* Node.swift in Sources */,
 				2856516324DB869E00689C05 /* VertexDescriptorLibrary.swift in Sources */,
 				2856516D24DB875800689C05 /* BasicShaders.metal in Sources */,
@@ -575,6 +614,7 @@
 				28A7C93724C8B488004F4AF0 /* Camera.swift in Sources */,
 				2841073824C36C1E009EB0A8 /* Pointer.swift in Sources */,
 				28F0348F24C51D300058EE67 /* SandboxScene.swift in Sources */,
+				28DED4C624E08EB20077D65C /* LightManager.swift in Sources */,
 				2856516624DB869E00689C05 /* RenderPipelineDescriptorLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

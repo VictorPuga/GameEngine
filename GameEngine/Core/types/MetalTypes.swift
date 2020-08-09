@@ -54,3 +54,6 @@ struct Material: sizeable {
     var useTexture: Bool = false
 }
 
+struct LightData: sizeable {
+    var position: SIMD3<Float> = SIMD3<Float>(repeating: 0)
+}
