@@ -11,7 +11,7 @@ import MetalKit
 class Sun: LightObject {
     init() {
         super.init(meshType: .Sphere, name: "Sun")
-        self.setColor(SIMD4<Float>(0.5, 0.5 ,0 ,1 ))
+        self.setMaterialColor(SIMD4<Float>(0.5, 0.5 ,0 ,1 ))
         self.setScale(0.3)
     }
 }
