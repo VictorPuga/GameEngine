@@ -12,13 +12,11 @@ class LightObject: GameObject {
     var lightData = LightData()
     
     init(name: String) {
-        super.init(meshType: .None)
-        self.setName(name)
+        super.init(name: name, meshType: .None)
     }
     
     init(meshType: MeshTypes, name: String) {
-        super.init(meshType: meshType)
-        self.setName(name)
+        super.init(name: name, meshType: meshType)
     }
     
     override func update() {
